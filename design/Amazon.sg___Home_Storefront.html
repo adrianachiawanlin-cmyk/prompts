@@ -1,0 +1,765 @@
+<!DOCTYPE html><html lang="en"><head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Amazon.sg: Shop Online for Electronics, Computers, Books, Toys, DVDs, Baby, Grocery, &amp; more</title>
+  <script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+  <script id="tailwind-config" data-stitch-original-src="3bd4066ce7a21c4d===../../tailwind.config.js">/** @type {import('tailwindcss').Config} */
+globalThis.tailwind = globalThis.tailwind || {};
+globalThis.tailwind.config = {
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'amazon-navy': '#131921',
+        'on-amazon-navy': '#FFFFFF',
+        'amazon-slate': '#232F3E',
+        'on-amazon-slate': '#FFFFFF',
+        'amazon-gold': '#FFD814',
+        'on-amazon-gold': '#0F1111',
+        'amazon-orange': '#FFA41C',
+        'on-amazon-orange': '#0F1111',
+        'amazon-amber': '#FEBD69',
+        'on-amazon-amber': '#0F1111',
+        'deal-red': '#CC0C39',
+        'on-deal-red': '#FFFFFF',
+        'prime-blue': '#00A8E1',
+        'star-amber': '#DE7921',
+        'light-primary': '#005767',
+        'light-on-primary': '#FFFFFF',
+        'light-primary-container': '#007185',
+        'light-on-primary-container': '#B9EFFF',
+        'light-secondary': '#46636B',
+        'light-on-secondary': '#FFFFFF',
+        'light-secondary-container': '#C6E5EF',
+        'light-on-secondary-container': '#4A676F',
+        'light-tertiary': '#744404',
+        'light-on-tertiary': '#FFFFFF',
+        'light-error': '#BA1A1A',
+        'light-on-error': '#FFFFFF',
+        'light-background': '#E3E6E6',
+        'light-on-background': '#0F1111',
+        'light-surface': '#FFFFFF',
+        'light-surface-dim': '#D5D9D9',
+        'light-surface-container-lowest': '#FFFFFF',
+        'light-surface-container-low': '#F7FAFA',
+        'light-surface-container': '#F1F4F5',
+        'light-surface-container-high': '#E3E6E6',
+        'light-surface-container-highest': '#D5D9D9',
+        'light-on-surface': '#0F1111',
+        'light-on-surface-variant': '#565959',
+        'light-outline': '#6F797C',
+        'light-outline-variant': '#D5D9D9',
+        'dark-primary': '#80D2E9',
+        'dark-on-primary': '#003640',
+        'dark-primary-container': '#007185',
+        'dark-on-primary-container': '#B9EFFF',
+        'dark-secondary': '#ADCCD5',
+        'dark-on-secondary': '#17343C',
+        'dark-secondary-container': '#2E4B53',
+        'dark-on-secondary-container': '#9CBAC3',
+        'dark-tertiary': '#FEB872',
+        'dark-on-tertiary': '#4A2800',
+        'dark-error': '#FFB4AB',
+        'dark-on-error': '#690005',
+        'dark-background': '#101415',
+        'dark-on-background': '#E0E3E4',
+        'dark-surface': '#181C1E',
+        'dark-surface-dim': '#101415',
+        'dark-surface-container-lowest': '#0B0F10',
+        'dark-surface-container-low': '#181C1E',
+        'dark-surface-container': '#1C2022',
+        'dark-surface-container-high': '#272B2C',
+        'dark-surface-container-highest': '#313537',
+        'dark-on-surface': '#E0E3E4',
+        'dark-on-surface-variant': '#BEC8CC',
+        'dark-outline': '#889296',
+        'dark-outline-variant': '#3F484B',
+      },
+      borderRadius: {
+        'none': '0px',
+        'sm': '4px',
+        'DEFAULT': '8px',
+        'md': '8px',
+        'lg': '12px',
+        'full': '9999px',
+      },
+      spacing: {
+        'gutter-xs': '4px',
+        'gutter-sm': '8px',
+        'gutter-md': '12px',
+        'gutter-lg': '16px',
+        'gutter-xl': '20px',
+        'section': '24px',
+        'page-margin': '20px',
+      },
+      fontFamily: {
+        'display': ['"Mulish"', 'sans-serif'],
+        'headline': ['"Mulish"', 'sans-serif'],
+        'title': ['"Instrument Sans"', 'sans-serif'],
+        'body': ['"Instrument Sans"', 'sans-serif'],
+        'label': ['"Instrument Sans"', 'sans-serif'],
+        'mono': ['"Spline Sans Mono"', 'monospace'],
+      },
+      fontSize: {
+        'display-lg': ['40px', { lineHeight: '46px', letterSpacing: '-0.5px', fontWeight: '800' }],
+        'display-lg-mobile': ['28px', { lineHeight: '34px', letterSpacing: '-0.25px', fontWeight: '800' }],
+        'headline-lg': ['24px', { lineHeight: '32px', letterSpacing: '-0.25px', fontWeight: '700' }],
+        'headline-md': ['20px', { lineHeight: '28px', letterSpacing: '0px', fontWeight: '700' }],
+        'headline-sm': ['16px', { lineHeight: '22px', letterSpacing: '0px', fontWeight: '700' }],
+        'title-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '600' }],
+        'body-md': ['14px', { lineHeight: '20px', letterSpacing: '0px', fontWeight: '400' }],
+        'body-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '400' }],
+        'label-lg': ['14px', { lineHeight: '18px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-md': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '600' }],
+        'label-sm': ['11px', { lineHeight: '14px', letterSpacing: '0.2px', fontWeight: '600' }],
+        'mono-sm': ['12px', { lineHeight: '16px', letterSpacing: '0px', fontWeight: '500' }],
+      },
+      transitionDuration: {
+        'state-change': '120ms',
+        'surface-enter': '200ms',
+        'surface-exit': '150ms',
+      },
+      transitionDelay: {
+        'state-change': '0ms',
+        'surface-enter': '0ms',
+        'surface-exit': '0ms',
+      },
+      transitionTimingFunction: {
+        'state-change': 'ease-out',
+        'surface-enter': 'cubic-bezier(0.2, 0, 0, 1)',
+        'surface-exit': 'cubic-bezier(0.3, 0, 1, 1)',
+      },
+    },
+  },
+};
+if (typeof module !== 'undefined') module.exports = globalThis.tailwind.config;
+</script>
+  <link href="https://fonts.googleapis.com/css2?family=Mulish:wght@600;700;800&amp;family=Instrument+Sans:wght@400;500;600;700&amp;family=Spline+Sans+Mono:wght@500&amp;display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=block" rel="stylesheet">
+  <style>
+    .material-symbols-outlined, .material-symbols-rounded, .material-symbols-sharp, .material-icons {
+      display: inline-block;
+      width: 1em;
+      height: 1em;
+      line-height: 1 !important;
+      box-sizing: content-box;
+      overflow: hidden;
+      white-space: nowrap;
+      direction: ltr;
+      vertical-align: middle;
+    }
+  </style>
+</head>
+<body class="bg-light-background text-light-on-background font-body antialiased">
+  <div id="top" class="min-h-screen flex flex-col">
+
+    <!-- Global Top Navigation -->
+    <header class="bg-amazon-navy text-on-amazon-navy sticky top-0 z-40">
+      <div class="max-w-[1440px] mx-auto px-page-margin py-gutter-sm flex items-center gap-gutter-lg">
+
+        <!-- Brand Logo -->
+        <a href="#top" class="flex items-center gap-1 px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-navy/60 transition-colors duration-state-change shrink-0" aria-label="Amazon.sg Home">
+          <div class="flex flex-col leading-none">
+            <div class="flex items-baseline">
+              <span class="font-headline text-headline-md tracking-tight text-on-amazon-navy" data-design-text-token="headline-md">amazon</span>
+              <span class="font-label text-label-md text-amazon-amber" data-design-text-token="label-md">.sg</span>
+            </div>
+            <svg width="72" height="10" viewBox="0 0 72 10" fill="none" aria-hidden="true" class="-mt-0.5">
+              <path d="M4 2.5C20 9.5 46 9.5 64 2.5" stroke="#FEBD69" stroke-width="2" stroke-linecap="round"></path>
+              <path d="M60 1.5L65.5 2.5L63.5 7.5" stroke="#FEBD69" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"></path>
+            </svg>
+          </div>
+        </a>
+
+        <!-- Deliver To Singapore -->
+        <a href="#location" class="hidden md:flex items-center gap-1.5 px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-navy/60 transition-colors duration-state-change text-left shrink-0">
+          <span class="material-symbols-outlined text-headline-sm text-on-amazon-navy mt-1" aria-hidden="true">location_on</span>
+          <div class="flex flex-col leading-tight">
+            <span class="font-body text-label-sm text-on-amazon-navy/80" data-design-text-token="label-sm">Deliver to</span>
+            <span class="font-label text-label-md text-on-amazon-navy" data-design-text-token="label-md">Singapore 018956</span>
+          </div>
+        </a>
+
+        <!-- Global Searchbar -->
+        <div class="flex-1 min-w-0">
+          <!-- COMPONENT: searchbar-standard -->
+          <form data-component-id="searchbar-standard" data-component-type="searchbar" data-component-variant="standard" role="search" class="flex items-stretch w-full rounded-sm overflow-hidden bg-light-surface text-light-on-surface focus-within:ring-2 focus-within:ring-amazon-orange" onsubmit="event.preventDefault();">
+            <label for="nav-search-category" class="sr-only text-light-on-surface">Search category</label>
+            <select id="nav-search-category" class="hidden sm:block border-0 border-r border-light-outline-variant bg-light-surface-container text-light-on-surface-variant font-body text-body-sm pl-3 pr-7 py-2 focus:ring-0 cursor-pointer">
+              <option>All</option>
+              <option>Electronics</option>
+              <option>Computers</option>
+              <option>Books</option>
+              <option>Toys &amp; Games</option>
+              <option>Baby</option>
+              <option>Amazon Fresh</option>
+            </select>
+            <input id="search-input-01" type="search" aria-label="Search Amazon.sg" placeholder="Search Amazon.sg for electronics, books, groceries..." class="flex-1 min-w-0 border-0 bg-light-surface text-light-on-surface placeholder:text-light-on-surface-variant px-3 py-2 font-body text-body-md focus:ring-0">
+            <button type="submit" aria-label="Go" class="bg-amazon-amber text-on-amazon-amber px-4 flex items-center justify-center hover:bg-amazon-orange transition-colors duration-state-change cursor-pointer">
+              <span class="material-symbols-outlined text-headline-md" aria-hidden="true">search</span>
+            </button>
+          </form>
+        </div>
+
+        <!-- Language / Country -->
+        <button type="button" class="hidden lg:flex items-center gap-1.5 px-2 py-1.5 rounded-sm border border-transparent hover:border-on-amazon-navy/60 transition-colors duration-state-change shrink-0 cursor-pointer">
+          <span class="font-label text-label-md text-on-amazon-navy" data-design-text-token="label-md">SG · EN</span>
+          <span class="material-symbols-outlined text-body-sm text-on-amazon-navy/80" aria-hidden="true">expand_more</span>
+        </button>
+
+        <!-- Account & Lists -->
+        <a href="#account" class="hidden sm:flex flex-col px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-navy/60 transition-colors duration-state-change leading-tight shrink-0">
+          <span class="font-body text-label-sm text-on-amazon-navy/80" data-design-text-token="label-sm">Hello, sign in</span>
+          <span class="font-label text-label-md text-on-amazon-navy flex items-center gap-0.5" data-design-text-token="label-md">
+            Account &amp; Lists
+            <span class="material-symbols-outlined text-body-sm" aria-hidden="true">expand_more</span>
+          </span>
+        </a>
+
+        <!-- Returns & Orders -->
+        <a href="#orders" class="hidden lg:flex flex-col px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-navy/60 transition-colors duration-state-change leading-tight shrink-0">
+          <span class="font-body text-label-sm text-on-amazon-navy/80" data-design-text-token="label-sm">Returns</span>
+          <span class="font-label text-label-md text-on-amazon-navy" data-design-text-token="label-md">&amp; Orders</span>
+        </a>
+
+        <!-- Cart -->
+        <a href="#cart" class="flex items-center gap-1.5 px-2.5 py-1 rounded-sm border border-transparent hover:border-on-amazon-navy/60 transition-colors duration-state-change shrink-0" aria-label="Shopping Cart">
+          <div class="relative flex items-center">
+            <span class="material-symbols-outlined text-headline-lg text-on-amazon-navy" aria-hidden="true">shopping_cart</span>
+            <!-- COMPONENT: badge-numeric -->
+            <span id="cart-count-badge" data-component-id="badge-numeric" data-component-type="badge" data-component-variant="numeric" role="status" class="-ml-2 -mt-4 inline-flex items-center justify-center rounded-full bg-amazon-orange text-on-amazon-orange px-1.5 py-0.5 font-label text-label-sm tabular-nums">
+              <span id="cart-count-text" data-design-text-token="label-sm">2</span>
+            </span>
+          </div>
+          <span class="font-label text-label-md text-on-amazon-navy mt-2" data-design-text-token="label-md">Cart</span>
+        </a>
+      </div>
+
+      <!-- Sub-Navigation Bar -->
+      <nav aria-label="Primary categories" class="bg-amazon-slate text-on-amazon-slate">
+        <div class="max-w-[1440px] mx-auto px-page-margin py-1.5 flex items-center justify-between gap-gutter-lg overflow-x-auto">
+          <div class="flex items-center gap-gutter-md whitespace-nowrap">
+            <button type="button" class="inline-flex items-center gap-1 px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-label text-label-md text-on-amazon-slate cursor-pointer">
+              <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">menu</span>
+              <span data-design-text-token="label-md">All</span>
+            </button>
+            <a href="#fresh" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Amazon Fresh</a>
+            <a href="#deals" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Today&#39;s Deals</a>
+            <a href="#prime" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Prime</a>
+            <a href="#electronics" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Electronics</a>
+            <a href="#computers" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Computers</a>
+            <a href="#books" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Books</a>
+            <a href="#toys" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Toys &amp; Games</a>
+            <a href="#baby" class="px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Baby</a>
+            <a href="#dvds" class="hidden xl:inline-block px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">DVDs</a>
+            <a href="#support" class="hidden xl:inline-block px-2 py-1 rounded-sm border border-transparent hover:border-on-amazon-slate/60 font-body text-body-md text-on-amazon-slate" data-design-text-token="body-md">Customer Service</a>
+          </div>
+          <a href="#prime" class="hidden lg:flex items-center gap-1.5 font-label text-label-md text-amazon-amber hover:underline whitespace-nowrap shrink-0" data-design-text-token="label-md">
+            <span class="material-symbols-outlined text-headline-sm" aria-hidden="true">local_shipping</span>
+            <span>Free delivery on orders over S$40</span>
+          </a>
+        </div>
+      </nav>
+    </header>
+
+    <!-- Main Storefront Content -->
+    <main class="flex-1 pb-10">
+
+      <!-- Full-Width Hero Banner with Bottom Fade -->
+      <section aria-label="Featured promotions" class="relative max-w-[1440px] mx-auto overflow-hidden">
+        <div class="relative h-[420px] w-full">
+          <img src="https://lh3.googleusercontent.com/aida/ALJJyrCDBRliTJNDeA3qs9absfW3eYuzUcnFsjTnl_XsSfjRQQ9Vrc-jqN6H4wakVueXvxkU4yaMJ_fDHF9gBv_Lwb_B7AjKYRHACSk90cer0sr3OoT1PKr23XOEwm-u7IwdNK03g9_7XnWFftLeYSmJoB1QBxH7AbUu5cEKuOHsusTptoJ0XzqbFB-nsFsM-735lcfxJVPyxZyzXJs9hav7c3QArTzQK5LBHLWIw--_Vj273W4i4gEPDxk1akvk" alt="Electronics, laptops, and smart home deals on Amazon.sg" class="w-full h-full object-cover object-center" data-stitch-original-src="e38e1f91c516b011===../../images/hero_prime_deals.jpg">
+          <!-- Gradient Scrim for Text Readability & Bottom Fade into Canvas -->
+          <div class="absolute inset-0 bg-gradient-to-r from-amazon-navy/25 via-amazon-navy/45 to-amazon-navy/85"></div>
+          <div class="absolute inset-x-0 bottom-0 h-40 bg-gradient-to-t from-light-background via-light-background/70 to-transparent"></div>
+
+          <!-- Hero Promo Copy -->
+          <div class="absolute inset-y-0 right-16 flex items-center justify-end max-w-lg text-left px-6 pb-16">
+            <div class="flex flex-col items-start gap-gutter-md text-on-amazon-navy">
+              <span class="inline-flex items-center rounded-sm bg-deal-red text-on-deal-red px-2.5 py-1 font-label text-label-md">
+                <span id="hero-badge" data-design-text-token="label-md">Singapore Tech &amp; Home Event</span>
+              </span>
+              <h1 id="hero-title" class="font-display text-display-lg text-on-amazon-navy text-balance" data-design-text-token="display-lg">
+                Save up to 35% on Electronics &amp; Computers
+              </h1>
+              <p id="hero-subtitle" class="font-body text-body-md text-on-amazon-navy/90 text-pretty" data-design-text-token="body-md">
+                Free next-day delivery across Singapore with Prime on audio, laptops, monitors, and smart home essentials.
+              </p>
+              <a href="#deals" class="inline-flex items-center justify-center rounded-full bg-amazon-gold text-on-amazon-gold px-6 py-2.5 font-label text-label-lg hover:bg-amazon-orange transition-colors duration-state-change" data-design-text-token="label-lg">
+                Shop Today&#39;s Deals
+              </a>
+            </div>
+          </div>
+
+          <!-- Carousel Controls -->
+          <button type="button" id="hero-prev" aria-label="Previous slide" class="absolute left-3 top-28 inline-flex items-center justify-center w-10 h-16 rounded-sm bg-light-surface/20 hover:bg-light-surface/40 text-on-amazon-navy transition-colors duration-state-change cursor-pointer">
+            <span class="material-symbols-outlined text-headline-lg" aria-hidden="true">chevron_left</span>
+          </button>
+          <!-- COMPONENT: button-icon -->
+          <button type="button" id="hero-next" data-component-id="button-icon" data-component-type="button" data-component-variant="icon" aria-label="Next slide" class="absolute right-3 top-28 inline-flex items-center justify-center w-10 h-16 rounded-sm bg-light-surface/20 hover:bg-light-surface/40 text-on-amazon-navy transition-colors duration-state-change cursor-pointer">
+            <span class="material-symbols-outlined text-headline-lg" aria-hidden="true">chevron_right</span>
+          </button>
+        </div>
+      </section>
+
+      <!-- Overlapping 4-Column Storefront Quad Cards -->
+      <section aria-label="Department highlights" class="relative z-10 -mt-28 max-w-[1440px] mx-auto px-page-margin">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-gutter-xl items-stretch">
+
+          <!-- Card 1: Electronics & Tech -->
+          <!-- COMPONENT: card-elevated -->
+          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface text-light-on-surface p-5 rounded flex flex-col justify-between gap-gutter-lg border border-light-outline-variant/60 h-full">
+            <header>
+              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Electronics &amp; Tech</h2>
+            </header>
+            <div class="grid grid-cols-2 gap-gutter-md">
+              <a href="#deals" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrA-3_bAsHNZUGgfSTFFvQGt_HY_NnaXRTTp_FfHSd1XpuW89AB15Ywg6oriXt-30I3GKr9Cs1A-DKaxebdrRu5x6Q-jQx3MVvnWo6oqb1D3rcXN-B7LB0qwe2ypS21W690S6zeNVD3qEkJUxTsFTwtjp72Iny7pCHoJ0QQWMZrICPYkKwrBmM60PoP7n_fx6W7Z3FRBYtJUPBzQmIWMjlG0fAg3EDAJbk-uOHWY0z2mOLHDy0DTq_qvhg" alt="Wireless headphones and smartwatches" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="e5155c086a5eae1b===../../images/cat_electronics.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Audio &amp; Wearables</span>
+              </a>
+              <a href="#deals" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrC-RqXpppwm03LM_Oa-VZiBs-3UvTRwsQQQEl8wGvDar8mV5IlnWTz19q3dEgdT7yOp8w_DKmeUFADE8uKb3lJ7_mnk1Mjzof_w3BjEebpoUxC_6sQq1-Ad2oTCvV8hAw7PdgBIq06Swirbmv6BQaR53m3rYNWGrtreHGfk6gYu5TCidb_vbUabxP9ib7Wc8D_8z9cUvgl3f0121cwSudnatQkccXGU11rMSQsaM-N1Bjd_v3CnX2-g" alt="Laptops and mechanical keyboards" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="1ef7d8bdd86781dc===../../images/cat_computers.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Laptops &amp; Keyboards</span>
+              </a>
+              <a href="#deals" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrDRTRf7NyqDCn9hXtgiNVE46c1L7Y-GZ7Mo7j60jWgHAg7k1u-20-krGx5rd6b2x_IONuZ5B3QMxdb5p5lhfmtmmXxO_qpPT8WdMNXa5txioo21DXHc7-kUpeBwwmrLfjy3GhOwe4n_tWNaV-_TPE8ovkZEk8RC0fXTgewTjDaHhxubvZpyRA1MKaWnSzPrlsK4dpDWuVlMjzYr3uLX93Acj3N10biVDzTF_A8EA2pE821ok9ApfBBAijY_DCg" alt="QHD Gaming Monitors" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="cb6a89e32cb9785f===../../images/deal_gaming_monitor.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Gaming Monitors</span>
+              </a>
+              <a href="#deals" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrD7gWhzX7eNSb8MNOu7zf1rOJbgUKu-XYRNGjyN8asOzxI5s0k8EWf-HGnEGt5late5c7uGu5EmAxhY1EdD_OIBfKy0pVIn8RUR82FsSbZ9c6NZbPKT1dss7xNP3ssJZ7JRAYoIQ40Fcztps4iesxdOk2N-b1JTxGFZ6TcgZlntTMnw7GEFmcuR73IeOAp8D0CWYPwtRml6KPU_vFlUF_ElfEnwwnbFRbyQWbS35aEr2nuna-akOsQArmG9ERaY" alt="Noise cancelling headphones" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="5680b774c8ff39b4===../../images/deal_sony_headphones.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Headphones</span>
+              </a>
+            </div>
+            <div>
+              <a href="#deals" class="font-body text-body-sm text-light-primary-container hover:text-star-amber hover:underline" data-design-text-token="body-sm">Shop all Electronics</a>
+            </div>
+          </article>
+
+          <!-- Card 2: Amazon Fresh -->
+          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface text-light-on-surface p-5 rounded flex flex-col justify-between gap-gutter-lg border border-light-outline-variant/60 h-full">
+            <header class="flex flex-col gap-1">
+              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Amazon Fresh</h2>
+              <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">2-hour scheduled delivery in Singapore</p>
+            </header>
+            <div class="bg-light-surface-container-low rounded-sm h-64 overflow-hidden">
+              <img src="https://lh3.googleusercontent.com/aida/ALJJyrBz9D0i-e5J1WhShmjTD6mUh4mFF0GL6oK30GAjhiH-2iCR80xKykgvkd640zVrcs5ZZ6ifNgBPpUWFNT8TbVUWEZBfQuXmHtbwU5GN35E9EFlmuY1Lp8zgAaP9iBZoMSve6eW_ip7iW0pN4j7WSC-bRKi-w9mpZDIiKm6Exq9alZ91YNPMPHftOUVHN0t4GqQdYjF9YgOFP75vZbVUaPYJUU3m9sQ63LcqY-GdGe6Jmwi15ilnpvUkHewg" alt="Fresh organic produce, sourdough bread, and orange juice" class="w-full h-full object-cover" data-stitch-original-src="1524a001ba2aa6c9===../../images/cat_fresh_grocery.jpg">
+            </div>
+            <div>
+              <a href="#fresh" class="font-body text-body-sm text-light-primary-container hover:text-star-amber hover:underline" data-design-text-token="body-sm">Shop Amazon Fresh</a>
+            </div>
+          </article>
+
+          <!-- Card 3: Books, Toys & Baby -->
+          <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface text-light-on-surface p-5 rounded flex flex-col justify-between gap-gutter-lg border border-light-outline-variant/60 h-full">
+            <header>
+              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Books, Toys &amp; Baby</h2>
+            </header>
+            <div class="grid grid-cols-2 gap-gutter-md">
+              <a href="#books" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrBUkojPOl44p33_PdfilSxdVPwpYl4maJCiwDgV2O6ndXAGfj9xlx_BduJLXV5DiulVkTuyPqdY7GILvRqtMAYrr11fzl3TUuAntuTKLGpzG-Y7QsVkPTT2d_CqPsCvuZkhH3d3VLEONKWELF6zFNOc8KvNo0_UJLXbc_5a40iaR_m7ARCS66yXlBub0VuX8XoYSS0L-f6MmNnLqYeO59wSKyP4I3oT6yjVIiKR46v5TFo6" alt="Bestselling books and Kindle" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="d32ba9b56366a1df===../../images/cat_books.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Books &amp; DVDs</span>
+              </a>
+              <a href="#toys" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrD5yfKxtKzp9z3Fn7qbvhCWL_SuGkl3ENxbMRLeW8khaiUPR-_6lxv6heVxsby7xSKTLMPQDAuSKu9-tUbbyh0FeWFQo16zVoK04oO3kZN-Etxeo9dLQIWF3oLAHv5qrD6LxA7VkP7tDMm6-YbCbWGFMYxtFN8rkN5tFOeAiejO8xJU01E3LyeSVXKnRrdTvsuXlgf2sglITC9GUMSX3GN_IufCxAL543U2L0XlbjlIOn_zxo_viKVp" alt="Toys, wooden blocks and baby essentials" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="dedfd6b8a0e1d0c8===../../images/cat_toys_baby.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Toys &amp; Baby</span>
+              </a>
+              <a href="#books" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrAQAwlb8cEpny0OgMIzYEVoLQ2Qk9GMxTvcUe1AgIiTOOxoLaWFC3dvs9bs3he21jB7m0rK9NdhSTdyJ-816RS5G5dXARXCDAMzrcWzeXRKd2CycJX17WIpe8bau4hidQl2q3FXPwxA2bcGxbaBXMg9qcksko3GIeXxXPdm62dAi2N5dsUgC6Sqjw9KbjqTZOaI6bL9tI1NUkNMrhFcoa3f1Q8JLH7KiVygVE5t3EEzr51geQkX_SB1xmdGbg" alt="Kindle e-readers" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="7a67bfc5d9a1e6a9===../../images/deal_kindle_reader.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Kindle E-Readers</span>
+              </a>
+              <a href="#home" class="flex flex-col gap-1 group">
+                <div class="bg-light-surface-container-low rounded-sm h-28 overflow-hidden p-2 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrDWsBjOzYjA5cBtMypowgtcXhEPo7eeA-ygA6JkIldthV-tWfMxEsAIBr0bQ45pC5fYJV3UtbVoruWmqhSO2mSS9FTT8gyGeU_K4sr4lOzzEAbzUxPnHOHdnbmgR46Bl64wmxG7cVYJJcVWaWh6tSkOYwd1gkY0XJPIhS0UKjHf6y4Kb_1u7sNpvqo89kdfXaLhIfj0HVrDEcTsX7kJlR37xcD7VRwiG4Whlq-XDjk5g_UlQX1FahqEOi4Avl2I5w8" alt="Home and kitchen appliances" class="w-full h-full object-cover rounded-sm group-hover:scale-105 transition-transform duration-state-change" data-stitch-original-src="0f55e8c9a44ec66a===../../images/deal_espresso_machine.jpg">
+                </div>
+                <span class="font-body text-body-sm text-light-on-surface" data-design-text-token="body-sm">Home &amp; Kitchen</span>
+              </a>
+            </div>
+            <div>
+              <a href="#categories" class="font-body text-body-sm text-light-primary-container hover:text-star-amber hover:underline" data-design-text-token="body-sm">Explore all departments</a>
+            </div>
+          </article>
+
+          <!-- Card 4: Sign in & Prime Spotlight -->
+          <div class="flex flex-col gap-gutter-xl h-full">
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface text-light-on-surface p-5 rounded flex flex-col gap-gutter-md border border-light-outline-variant/60">
+              <h2 class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">Sign in for best experience</h2>
+              <!-- COMPONENT: button-primary -->
+              <button data-component-id="button-primary" data-component-type="button" data-component-variant="primary" type="button" class="w-full inline-flex items-center justify-center rounded-full bg-amazon-gold text-on-amazon-gold px-5 py-2.5 font-label text-label-lg hover:bg-amazon-orange focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-light-primary transition-colors duration-state-change cursor-pointer">
+                <span data-design-text-token="label-lg">Sign in securely</span>
+              </button>
+            </article>
+
+            <article data-component-id="card-elevated" data-component-type="card" data-component-variant="elevated" class="bg-light-surface text-light-on-surface p-5 rounded flex flex-col justify-between gap-gutter-md border border-light-outline-variant/60 flex-1">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="flex items-center gap-1.5">
+                  <span class="material-symbols-outlined text-headline-md text-light-primary-container" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">verified</span>
+                  <span class="font-headline text-headline-sm text-light-primary-container" data-design-text-token="headline-sm">Amazon Prime Singapore</span>
+                </div>
+                <p class="font-body text-body-md text-light-on-surface text-pretty" data-design-text-token="body-md">
+                  Enjoy FREE 1-day delivery on local items, FREE international shipping from Amazon US &amp; JP, and Prime Video for S$4.99/month.
+                </p>
+              </div>
+              <a href="#prime" class="font-body text-body-sm text-light-primary-container hover:text-star-amber hover:underline" data-design-text-token="body-sm">Start your 30-day free trial</a>
+            </article>
+          </div>
+
+        </div>
+      </section>
+
+      <!-- Today's Deals Section -->
+      <section id="deals" aria-label="Today&#39;s Deals" class="max-w-[1440px] mx-auto px-page-margin mt-section">
+        <div class="bg-light-surface rounded p-5 border border-light-outline-variant/60 flex flex-col gap-gutter-lg">
+          <div class="flex items-baseline justify-between gap-4">
+            <div class="flex items-baseline gap-gutter-md">
+              <h2 class="font-headline text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">Today&#39;s Deals</h2>
+              <span class="font-mono text-mono-sm text-deal-red tabular-nums" data-design-text-token="mono-sm">Ends in 08:42:15</span>
+            </div>
+            <a href="#deals" class="font-body text-body-sm text-light-primary-container hover:text-star-amber hover:underline" data-design-text-token="body-sm">See all deals</a>
+          </div>
+
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-gutter-lg items-stretch">
+
+            <!-- Deal 1 -->
+            <!-- COMPONENT: card-action -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col justify-between gap-gutter-md h-full">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="bg-light-surface-container-low rounded-sm h-48 overflow-hidden p-3 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrD7gWhzX7eNSb8MNOu7zf1rOJbgUKu-XYRNGjyN8asOzxI5s0k8EWf-HGnEGt5late5c7uGu5EmAxhY1EdD_OIBfKy0pVIn8RUR82FsSbZ9c6NZbPKT1dss7xNP3ssJZ7JRAYoIQ40Fcztps4iesxdOk2N-b1JTxGFZ6TcgZlntTMnw7GEFmcuR73IeOAp8D0CWYPwtRml6KPU_vFlUF_ElfEnwwnbFRbyQWbS35aEr2nuna-akOsQArmG9ERaY" alt="Sony WH-1000XM5 Wireless Noise Cancelling Headphones" class="w-full h-full object-contain" data-stitch-original-src="5680b774c8ff39b4===../../images/deal_sony_headphones.jpg">
+                </div>
+                <div class="flex items-center gap-gutter-sm">
+                  <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center rounded-sm bg-deal-red text-on-deal-red px-2 py-0.5 font-label text-label-sm">
+                    <span data-design-text-token="label-sm">30% off</span>
+                  </span>
+                  <span class="font-label text-label-sm text-deal-red" data-design-text-token="label-sm">Limited time deal</span>
+                </div>
+                <header class="flex flex-col gap-1">
+                  <h3 class="font-title text-title-md text-light-on-surface line-clamp-2" data-design-text-token="title-md">
+                    Sony WH-1000XM5 Wireless Noise Cancelling Headphones, Midnight Black
+                  </h3>
+                  <div class="flex items-baseline gap-2 tabular-nums">
+                    <span class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">S$419.00</span>
+                    <span class="font-body text-body-sm text-light-on-surface-variant line-through" data-design-text-token="body-sm">S$599.00</span>
+                  </div>
+                </header>
+                <div class="flex items-center gap-1 text-body-sm">
+                  <span class="material-symbols-outlined text-title-md text-star-amber" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="font-label text-label-md text-light-on-surface tabular-nums" data-design-text-token="label-md">4.8</span>
+                  <span class="font-body text-body-sm text-light-primary-container tabular-nums" data-design-text-token="body-sm">(3,412)</span>
+                  <span class="font-label text-label-sm text-light-primary-container ml-1" data-design-text-token="label-sm">Prime</span>
+                </div>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">FREE delivery tomorrow by 10 PM</p>
+              </div>
+              <footer class="pt-1">
+                <button type="button" data-add-to-cart class="w-full rounded-full bg-amazon-gold text-on-amazon-gold py-2 px-4 font-label text-label-md hover:bg-amazon-orange transition-colors duration-state-change cursor-pointer">
+                  <span data-design-text-token="label-md">Add to Cart</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Deal 2 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col justify-between gap-gutter-md h-full">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="bg-light-surface-container-low rounded-sm h-48 overflow-hidden p-3 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrDWsBjOzYjA5cBtMypowgtcXhEPo7eeA-ygA6JkIldthV-tWfMxEsAIBr0bQ45pC5fYJV3UtbVoruWmqhSO2mSS9FTT8gyGeU_K4sr4lOzzEAbzUxPnHOHdnbmgR46Bl64wmxG7cVYJJcVWaWh6tSkOYwd1gkY0XJPIhS0UKjHf6y4Kb_1u7sNpvqo89kdfXaLhIfj0HVrDEcTsX7kJlR37xcD7VRwiG4Whlq-XDjk5g_UlQX1FahqEOi4Avl2I5w8" alt="Breville Bambino Compact Espresso Machine" class="w-full h-full object-contain" data-stitch-original-src="0f55e8c9a44ec66a===../../images/deal_espresso_machine.jpg">
+                </div>
+                <div class="flex items-center gap-gutter-sm">
+                  <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center rounded-sm bg-deal-red text-on-deal-red px-2 py-0.5 font-label text-label-sm">
+                    <span data-design-text-token="label-sm">22% off</span>
+                  </span>
+                  <span class="font-label text-label-sm text-deal-red" data-design-text-token="label-sm">Limited time deal</span>
+                </div>
+                <header class="flex flex-col gap-1">
+                  <h3 class="font-title text-title-md text-light-on-surface line-clamp-2" data-design-text-token="title-md">
+                    Breville Bambino Compact Espresso Machine, Brushed Stainless Steel
+                  </h3>
+                  <div class="flex items-baseline gap-2 tabular-nums">
+                    <span class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">S$468.00</span>
+                    <span class="font-body text-body-sm text-light-on-surface-variant line-through" data-design-text-token="body-sm">S$599.00</span>
+                  </div>
+                </header>
+                <div class="flex items-center gap-1 text-body-sm">
+                  <span class="material-symbols-outlined text-title-md text-star-amber" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="font-label text-label-md text-light-on-surface tabular-nums" data-design-text-token="label-md">4.7</span>
+                  <span class="font-body text-body-sm text-light-primary-container tabular-nums" data-design-text-token="body-sm">(1,890)</span>
+                  <span class="font-label text-label-sm text-light-primary-container ml-1" data-design-text-token="label-sm">Prime</span>
+                </div>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">FREE delivery tomorrow by 10 PM</p>
+              </div>
+              <footer class="pt-1">
+                <button type="button" data-add-to-cart class="w-full rounded-full bg-amazon-gold text-on-amazon-gold py-2 px-4 font-label text-label-md hover:bg-amazon-orange transition-colors duration-state-change cursor-pointer">
+                  <span data-design-text-token="label-md">Add to Cart</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Deal 3 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col justify-between gap-gutter-md h-full">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="bg-light-surface-container-low rounded-sm h-48 overflow-hidden p-3 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrAQAwlb8cEpny0OgMIzYEVoLQ2Qk9GMxTvcUe1AgIiTOOxoLaWFC3dvs9bs3he21jB7m0rK9NdhSTdyJ-816RS5G5dXARXCDAMzrcWzeXRKd2CycJX17WIpe8bau4hidQl2q3FXPwxA2bcGxbaBXMg9qcksko3GIeXxXPdm62dAi2N5dsUgC6Sqjw9KbjqTZOaI6bL9tI1NUkNMrhFcoa3f1Q8JLH7KiVygVE5t3EEzr51geQkX_SB1xmdGbg" alt="Kindle Paperwhite 16GB Waterproof E-Reader" class="w-full h-full object-contain" data-stitch-original-src="7a67bfc5d9a1e6a9===../../images/deal_kindle_reader.jpg">
+                </div>
+                <div class="flex items-center gap-gutter-sm">
+                  <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center rounded-sm bg-deal-red text-on-deal-red px-2 py-0.5 font-label text-label-sm">
+                    <span data-design-text-token="label-sm">18% off</span>
+                  </span>
+                  <span class="font-label text-label-sm text-deal-red" data-design-text-token="label-sm">Prime Deal</span>
+                </div>
+                <header class="flex flex-col gap-1">
+                  <h3 class="font-title text-title-md text-light-on-surface line-clamp-2" data-design-text-token="title-md">
+                    Kindle Paperwhite (16 GB) – 6.8&#34; glare-free display &amp; adjustable warm light
+                  </h3>
+                  <div class="flex items-baseline gap-2 tabular-nums">
+                    <span class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">S$219.00</span>
+                    <span class="font-body text-body-sm text-light-on-surface-variant line-through" data-design-text-token="body-sm">S$269.00</span>
+                  </div>
+                </header>
+                <div class="flex items-center gap-1 text-body-sm">
+                  <span class="material-symbols-outlined text-title-md text-star-amber" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="font-label text-label-md text-light-on-surface tabular-nums" data-design-text-token="label-md">4.9</span>
+                  <span class="font-body text-body-sm text-light-primary-container tabular-nums" data-design-text-token="body-sm">(8,210)</span>
+                  <span class="font-label text-label-sm text-light-primary-container ml-1" data-design-text-token="label-sm">Prime</span>
+                </div>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">FREE delivery tomorrow by 10 PM</p>
+              </div>
+              <footer class="pt-1">
+                <button type="button" data-add-to-cart class="w-full rounded-full bg-amazon-gold text-on-amazon-gold py-2 px-4 font-label text-label-md hover:bg-amazon-orange transition-colors duration-state-change cursor-pointer">
+                  <span data-design-text-token="label-md">Add to Cart</span>
+                </button>
+              </footer>
+            </article>
+
+            <!-- Deal 4 -->
+            <article data-component-id="card-action" data-component-type="card" data-component-variant="action" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col justify-between gap-gutter-md h-full">
+              <div class="flex flex-col gap-gutter-sm">
+                <div class="bg-light-surface-container-low rounded-sm h-48 overflow-hidden p-3 flex items-center justify-center">
+                  <img src="https://lh3.googleusercontent.com/aida/ALJJyrDRTRf7NyqDCn9hXtgiNVE46c1L7Y-GZ7Mo7j60jWgHAg7k1u-20-krGx5rd6b2x_IONuZ5B3QMxdb5p5lhfmtmmXxO_qpPT8WdMNXa5txioo21DXHc7-kUpeBwwmrLfjy3GhOwe4n_tWNaV-_TPE8ovkZEk8RC0fXTgewTjDaHhxubvZpyRA1MKaWnSzPrlsK4dpDWuVlMjzYr3uLX93Acj3N10biVDzTF_A8EA2pE821ok9ApfBBAijY_DCg" alt="LG UltraGear 27-inch QHD 165Hz Gaming Monitor" class="w-full h-full object-contain" data-stitch-original-src="cb6a89e32cb9785f===../../images/deal_gaming_monitor.jpg">
+                </div>
+                <div class="flex items-center gap-gutter-sm">
+                  <span data-component-id="badge-status" data-component-type="badge" data-component-variant="status" role="status" class="inline-flex items-center rounded-sm bg-deal-red text-on-deal-red px-2 py-0.5 font-label text-label-sm">
+                    <span data-design-text-token="label-sm">28% off</span>
+                  </span>
+                  <span class="font-label text-label-sm text-deal-red" data-design-text-token="label-sm">Limited time deal</span>
+                </div>
+                <header class="flex flex-col gap-1">
+                  <h3 class="font-title text-title-md text-light-on-surface line-clamp-2" data-design-text-token="title-md">
+                    LG UltraGear 27&#34; QHD 165Hz 1ms Gaming Monitor with NVIDIA G-SYNC
+                  </h3>
+                  <div class="flex items-baseline gap-2 tabular-nums">
+                    <span class="font-headline text-headline-md text-light-on-surface" data-design-text-token="headline-md">S$359.00</span>
+                    <span class="font-body text-body-sm text-light-on-surface-variant line-through" data-design-text-token="body-sm">S$499.00</span>
+                  </div>
+                </header>
+                <div class="flex items-center gap-1 text-body-sm">
+                  <span class="material-symbols-outlined text-title-md text-star-amber" style="font-variation-settings: &#39;FILL&#39; 1;" aria-hidden="true">star</span>
+                  <span class="font-label text-label-md text-light-on-surface tabular-nums" data-design-text-token="label-md">4.6</span>
+                  <span class="font-body text-body-sm text-light-primary-container tabular-nums" data-design-text-token="body-sm">(942)</span>
+                  <span class="font-label text-label-sm text-light-primary-container ml-1" data-design-text-token="label-sm">Prime</span>
+                </div>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">FREE delivery tomorrow by 10 PM</p>
+              </div>
+              <footer class="pt-1">
+                <button type="button" data-add-to-cart class="w-full rounded-full bg-amazon-gold text-on-amazon-gold py-2 px-4 font-label text-label-md hover:bg-amazon-orange transition-colors duration-state-change cursor-pointer">
+                  <span data-design-text-token="label-md">Add to Cart</span>
+                </button>
+              </footer>
+            </article>
+
+          </div>
+        </div>
+      </section>
+
+      <!-- Shop by Category Strip -->
+      <section id="categories" aria-label="Shop by Category" class="max-w-[1440px] mx-auto px-page-margin mt-section">
+        <div class="bg-light-surface rounded p-5 border border-light-outline-variant/60 flex flex-col gap-gutter-lg">
+          <div class="flex items-baseline justify-between">
+            <h2 class="font-headline text-headline-lg text-light-on-surface" data-design-text-token="headline-lg">Shop by Category</h2>
+            <a href="#categories" class="font-body text-body-sm text-light-primary-container hover:text-star-amber hover:underline" data-design-text-token="body-sm">View all categories</a>
+          </div>
+
+          <div class="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-gutter-lg items-stretch">
+            <!-- COMPONENT: card-interactive -->
+            <a href="#electronics" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col gap-2 hover:border-light-primary-container transition-colors duration-state-change h-full">
+              <div class="bg-light-surface-container-low rounded-sm h-32 overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrA-3_bAsHNZUGgfSTFFvQGt_HY_NnaXRTTp_FfHSd1XpuW89AB15Ywg6oriXt-30I3GKr9Cs1A-DKaxebdrRu5x6Q-jQx3MVvnWo6oqb1D3rcXN-B7LB0qwe2ypS21W690S6zeNVD3qEkJUxTsFTwtjp72Iny7pCHoJ0QQWMZrICPYkKwrBmM60PoP7n_fx6W7Z3FRBYtJUPBzQmIWMjlG0fAg3EDAJbk-uOHWY0z2mOLHDy0DTq_qvhg" alt="Electronics" class="w-full h-full object-cover" data-stitch-original-src="e5155c086a5eae1b===../../images/cat_electronics.jpg">
+              </div>
+              <header>
+                <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Electronics</h3>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">Audio, cameras &amp; smart home</p>
+              </header>
+            </a>
+
+            <a href="#computers" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col gap-2 hover:border-light-primary-container transition-colors duration-state-change h-full">
+              <div class="bg-light-surface-container-low rounded-sm h-32 overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrC-RqXpppwm03LM_Oa-VZiBs-3UvTRwsQQQEl8wGvDar8mV5IlnWTz19q3dEgdT7yOp8w_DKmeUFADE8uKb3lJ7_mnk1Mjzof_w3BjEebpoUxC_6sQq1-Ad2oTCvV8hAw7PdgBIq06Swirbmv6BQaR53m3rYNWGrtreHGfk6gYu5TCidb_vbUabxP9ib7Wc8D_8z9cUvgl3f0121cwSudnatQkccXGU11rMSQsaM-N1Bjd_v3CnX2-g" alt="Computers" class="w-full h-full object-cover" data-stitch-original-src="1ef7d8bdd86781dc===../../images/cat_computers.jpg">
+              </div>
+              <header>
+                <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Computers</h3>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">Laptops, monitors &amp; SSDs</p>
+              </header>
+            </a>
+
+            <a href="#books" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col gap-2 hover:border-light-primary-container transition-colors duration-state-change h-full">
+              <div class="bg-light-surface-container-low rounded-sm h-32 overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBUkojPOl44p33_PdfilSxdVPwpYl4maJCiwDgV2O6ndXAGfj9xlx_BduJLXV5DiulVkTuyPqdY7GILvRqtMAYrr11fzl3TUuAntuTKLGpzG-Y7QsVkPTT2d_CqPsCvuZkhH3d3VLEONKWELF6zFNOc8KvNo0_UJLXbc_5a40iaR_m7ARCS66yXlBub0VuX8XoYSS0L-f6MmNnLqYeO59wSKyP4I3oT6yjVIiKR46v5TFo6" alt="Books and DVDs" class="w-full h-full object-cover" data-stitch-original-src="d32ba9b56366a1df===../../images/cat_books.jpg">
+              </div>
+              <header>
+                <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Books &amp; DVDs</h3>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">Bestsellers, manga &amp; films</p>
+              </header>
+            </a>
+
+            <a href="#fresh" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col gap-2 hover:border-light-primary-container transition-colors duration-state-change h-full">
+              <div class="bg-light-surface-container-low rounded-sm h-32 overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrBz9D0i-e5J1WhShmjTD6mUh4mFF0GL6oK30GAjhiH-2iCR80xKykgvkd640zVrcs5ZZ6ifNgBPpUWFNT8TbVUWEZBfQuXmHtbwU5GN35E9EFlmuY1Lp8zgAaP9iBZoMSve6eW_ip7iW0pN4j7WSC-bRKi-w9mpZDIiKm6Exq9alZ91YNPMPHftOUVHN0t4GqQdYjF9YgOFP75vZbVUaPYJUU3m9sQ63LcqY-GdGe6Jmwi15ilnpvUkHewg" alt="Amazon Fresh Grocery" class="w-full h-full object-cover" data-stitch-original-src="1524a001ba2aa6c9===../../images/cat_fresh_grocery.jpg">
+              </div>
+              <header>
+                <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Grocery &amp; Fresh</h3>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">Produce, pantry &amp; chilled</p>
+              </header>
+            </a>
+
+            <a href="#toys" data-component-id="card-interactive" data-component-type="card" data-component-variant="interactive" class="bg-light-surface text-light-on-surface p-4 rounded border border-light-outline-variant/60 flex flex-col gap-2 hover:border-light-primary-container transition-colors duration-state-change h-full">
+              <div class="bg-light-surface-container-low rounded-sm h-32 overflow-hidden">
+                <img src="https://lh3.googleusercontent.com/aida/ALJJyrD5yfKxtKzp9z3Fn7qbvhCWL_SuGkl3ENxbMRLeW8khaiUPR-_6lxv6heVxsby7xSKTLMPQDAuSKu9-tUbbyh0FeWFQo16zVoK04oO3kZN-Etxeo9dLQIWF3oLAHv5qrD6LxA7VkP7tDMm6-YbCbWGFMYxtFN8rkN5tFOeAiejO8xJU01E3LyeSVXKnRrdTvsuXlgf2sglITC9GUMSX3GN_IufCxAL543U2L0XlbjlIOn_zxo_viKVp" alt="Toys and Baby" class="w-full h-full object-cover" data-stitch-original-src="dedfd6b8a0e1d0c8===../../images/cat_toys_baby.jpg">
+              </div>
+              <header>
+                <h3 class="font-title text-title-md text-light-on-surface" data-design-text-token="title-md">Toys &amp; Baby</h3>
+                <p class="font-body text-body-sm text-light-on-surface-variant" data-design-text-token="body-sm">LEGO, nursery &amp; care</p>
+              </header>
+            </a>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- Footer -->
+    <footer class="bg-amazon-slate text-on-amazon-slate mt-auto">
+      <a href="#top" class="block w-full bg-amazon-slate/90 hover:bg-amazon-slate text-center py-3 border-b border-on-amazon-slate/10 font-label text-label-md text-on-amazon-slate transition-colors duration-state-change" data-design-text-token="label-md">
+        Back to top
+      </a>
+
+      <div class="max-w-5xl mx-auto px-page-margin py-10 grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div class="flex flex-col gap-2">
+          <h3 class="font-headline text-headline-sm text-on-amazon-slate" data-design-text-token="headline-sm">Get to Know Us</h3>
+          <a href="#about" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">About Amazon</a>
+          <a href="#careers" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Careers</a>
+          <a href="#sustainability" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Sustainability</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-headline text-headline-sm text-on-amazon-slate" data-design-text-token="headline-sm">Make Money with Us</h3>
+          <a href="#sell" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Sell on Amazon.sg</a>
+          <a href="#fba" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Fulfilment by Amazon</a>
+          <a href="#ads" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Advertise Your Products</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-headline text-headline-sm text-on-amazon-slate" data-design-text-token="headline-sm">Payment Products</h3>
+          <a href="#gift-cards" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Amazon Gift Cards</a>
+          <a href="#paynow" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">PayNow &amp; Local Cards</a>
+          <a href="#instalments" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">0% Instalment Plans</a>
+        </div>
+        <div class="flex flex-col gap-2">
+          <h3 class="font-headline text-headline-sm text-on-amazon-slate" data-design-text-token="headline-sm">Let Us Help You</h3>
+          <a href="#orders" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Your Account</a>
+          <a href="#shipping" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Shipping Rates &amp; Policies</a>
+          <a href="#returns" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Returns &amp; Replacements</a>
+          <a href="#support" class="font-body text-body-sm text-on-amazon-slate/80 hover:underline" data-design-text-token="body-sm">Help</a>
+        </div>
+      </div>
+
+      <div class="bg-amazon-navy text-on-amazon-navy py-6 border-t border-on-amazon-navy/10">
+        <div class="max-w-[1440px] mx-auto px-page-margin flex flex-col sm:flex-row items-center justify-center gap-4 text-center">
+          <span class="font-headline text-headline-sm text-on-amazon-navy" data-design-text-token="headline-sm">amazon.sg</span>
+          <span class="font-body text-body-sm text-on-amazon-navy/75" data-design-text-token="body-sm">Singapore · English · SGD (S$)</span>
+          <span class="font-body text-body-sm text-on-amazon-navy/60" data-design-text-token="body-sm">© 1996-2026, Amazon.com, Inc. or its affiliates</span>
+        </div>
+      </div>
+    </footer>
+
+  </div>
+
+  <script>
+    (function () {
+      var cartCount = 2;
+      var cartText = document.getElementById('cart-count-text');
+      var addButtons = document.querySelectorAll('[data-add-to-cart]');
+
+      addButtons.forEach(function (btn) {
+        btn.addEventListener('click', function () {
+          cartCount += 1;
+          if (cartText) {
+            cartText.textContent = String(cartCount);
+          }
+          var label = btn.querySelector('[data-design-text-token]');
+          if (label) {
+            var prev = label.textContent;
+            label.textContent = 'Added to Cart';
+            setTimeout(function () {
+              label.textContent = prev;
+            }, 1200);
+          }
+        });
+      });
+
+      var slides = [
+        {
+          badge: 'Singapore Tech & Home Event',
+          title: 'Save up to 35% on Electronics & Computers',
+          subtitle: 'Free next-day delivery across Singapore with Prime on audio, laptops, monitors, and smart home essentials.'
+        },
+        {
+          badge: 'Amazon Fresh Singapore',
+          title: 'Fresh groceries delivered in 2 hours',
+          subtitle: 'Shop organic produce, chilled dairy, bakery staples, and household essentials with free delivery over S$60.'
+        },
+        {
+          badge: 'Prime Member Exclusives',
+          title: 'Fast, free delivery from SG, US & JP',
+          subtitle: 'Unlock Prime-only deals on Sony, Kindle, LEGO, and everyday essentials for S$4.99/month.'
+        }
+      ];
+      var slideIndex = 0;
+      var badgeEl = document.getElementById('hero-badge');
+      var titleEl = document.getElementById('hero-title');
+      var subtitleEl = document.getElementById('hero-subtitle');
+
+      function renderSlide(idx) {
+        var s = slides[idx];
+        if (badgeEl) badgeEl.textContent = s.badge;
+        if (titleEl) titleEl.textContent = s.title;
+        if (subtitleEl) subtitleEl.textContent = s.subtitle;
+      }
+
+      var prevBtn = document.getElementById('hero-prev');
+      var nextBtn = document.getElementById('hero-next');
+      if (prevBtn) {
+        prevBtn.addEventListener('click', function () {
+          slideIndex = (slideIndex - 1 + slides.length) % slides.length;
+          renderSlide(slideIndex);
+        });
+      }
+      if (nextBtn) {
+        nextBtn.addEventListener('click', function () {
+          slideIndex = (slideIndex + 1) % slides.length;
+          renderSlide(slideIndex);
+        });
+      }
+    })();
+  </script>
+
+
+</body></html>

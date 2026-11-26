@@ -1,0 +1,492 @@
+import {
+  DepartmentId,
+  HelpArticle,
+  HeroSlide,
+  Order,
+  Product,
+  SingaporeLocation,
+} from '../types/store';
+
+export const IMAGES = {
+  heroPrimeDeals:
+    'https://lh3.googleusercontent.com/aida/ALJJyrCDBRliTJNDeA3qs9absfW3eYuzUcnFsjTnl_XsSfjRQQ9Vrc-jqN6H4wakVueXvxkU4yaMJ_fDHF9gBv_Lwb_B7AjKYRHACSk90cer0sr3OoT1PKr23XOEwm-u7IwdNK03g9_7XnWFftLeYSmJoB1QBxH7AbUu5cEKuOHsusTptoJ0XzqbFB-nsFsM-735lcfxJVPyxZyzXJs9hav7c3QArTzQK5LBHLWIw--_Vj273W4i4gEPDxk1akvk',
+  catElectronics:
+    'https://lh3.googleusercontent.com/aida/ALJJyrA-3_bAsHNZUGgfSTFFvQGt_HY_NnaXRTTp_FfHSd1XpuW89AB15Ywg6oriXt-30I3GKr9Cs1A-DKaxebdrRu5x6Q-jQx3MVvnWo6oqb1D3rcXN-B7LB0qwe2ypS21W690S6zeNVD3qEkJUxTsFTwtjp72Iny7pCHoJ0QQWMZrICPYkKwrBmM60PoP7n_fx6W7Z3FRBYtJUPBzQmIWMjlG0fAg3EDAJbk-uOHWY0z2mOLHDy0DTq_qvhg',
+  catComputers:
+    'https://lh3.googleusercontent.com/aida/ALJJyrC-RqXpppwm03LM_Oa-VZiBs-3UvTRwsQQQEl8wGvDar8mV5IlnWTz19q3dEgdT7yOp8w_DKmeUFADE8uKb3lJ7_mnk1Mjzof_w3BjEebpoUxC_6sQq1-Ad2oTCvV8hAw7PdgBIq06Swirbmv6BQaR53m3rYNWGrtreHGfk6gYu5TCidb_vbUabxP9ib7Wc8D_8z9cUvgl3f0121cwSudnatQkccXGU11rMSQsaM-N1Bjd_v3CnX2-g',
+  dealGamingMonitor:
+    'https://lh3.googleusercontent.com/aida/ALJJyrDRTRf7NyqDCn9hXtgiNVE46c1L7Y-GZ7Mo7j60jWgHAg7k1u-20-krGx5rd6b2x_IONuZ5B3QMxdb5p5lhfmtmmXxO_qpPT8WdMNXa5txioo21DXHc7-kUpeBwwmrLfjy3GhOwe4n_tWNaV-_TPE8ovkZEk8RC0fXTgewTjDaHhxubvZpyRA1MKaWnSzPrlsK4dpDWuVlMjzYr3uLX93Acj3N10biVDzTF_A8EA2pE821ok9ApfBBAijY_DCg',
+  dealSonyHeadphones:
+    'https://lh3.googleusercontent.com/aida/ALJJyrD7gWhzX7eNSb8MNOu7zf1rOJbgUKu-XYRNGjyN8asOzxI5s0k8EWf-HGnEGt5late5c7uGu5EmAxhY1EdD_OIBfKy0pVIn8RUR82FsSbZ9c6NZbPKT1dss7xNP3ssJZ7JRAYoIQ40Fcztps4iesxdOk2N-b1JTxGFZ6TcgZlntTMnw7GEFmcuR73IeOAp8D0CWYPwtRml6KPU_vFlUF_ElfEnwwnbFRbyQWbS35aEr2nuna-akOsQArmG9ERaY',
+  catFreshGrocery:
+    'https://lh3.googleusercontent.com/aida/ALJJyrBz9D0i-e5J1WhShmjTD6mUh4mFF0GL6oK30GAjhiH-2iCR80xKykgvkd640zVrcs5ZZ6ifNgBPpUWFNT8TbVUWEZBfQuXmHtbwU5GN35E9EFlmuY1Lp8zgAaP9iBZoMSve6eW_ip7iW0pN4j7WSC-bRKi-w9mpZDIiKm6Exq9alZ91YNPMPHftOUVHN0t4GqQdYjF9YgOFP75vZbVUaPYJUU3m9sQ63LcqY-GdGe6Jmwi15ilnpvUkHewg',
+  catBooks:
+    'https://lh3.googleusercontent.com/aida/ALJJyrBUkojPOl44p33_PdfilSxdVPwpYl4maJCiwDgV2O6ndXAGfj9xlx_BduJLXV5DiulVkTuyPqdY7GILvRqtMAYrr11fzl3TUuAntuTKLGpzG-Y7QsVkPTT2d_CqPsCvuZkhH3d3VLEONKWELF6zFNOc8KvNo0_UJLXbc_5a40iaR_m7ARCS66yXlBub0VuX8XoYSS0L-f6MmNnLqYeO59wSKyP4I3oT6yjVIiKR46v5TFo6',
+  catToysBaby:
+    'https://lh3.googleusercontent.com/aida/ALJJyrD5yfKxtKzp9z3Fn7qbvhCWL_SuGkl3ENxbMRLeW8khaiUPR-_6lxv6heVxsby7xSKTLMPQDAuSKu9-tUbbyh0FeWFQo16zVoK04oO3kZN-Etxeo9dLQIWF3oLAHv5qrD6LxA7VkP7tDMm6-YbCbWGFMYxtFN8rkN5tFOeAiejO8xJU01E3LyeSVXKnRrdTvsuXlgf2sglITC9GUMSX3GN_IufCxAL543U2L0XlbjlIOn_zxo_viKVp',
+  dealKindleReader:
+    'https://lh3.googleusercontent.com/aida/ALJJyrAQAwlb8cEpny0OgMIzYEVoLQ2Qk9GMxTvcUe1AgIiTOOxoLaWFC3dvs9bs3he21jB7m0rK9NdhSTdyJ-816RS5G5dXARXCDAMzrcWzeXRKd2CycJX17WIpe8bau4hidQl2q3FXPwxA2bcGxbaBXMg9qcksko3GIeXxXPdm62dAi2N5dsUgC6Sqjw9KbjqTZOaI6bL9tI1NUkNMrhFcoa3f1Q8JLH7KiVygVE5t3EEzr51geQkX_SB1xmdGbg',
+  dealEspressoMachine:
+    'https://lh3.googleusercontent.com/aida/ALJJyrDWsBjOzYjA5cBtMypowgtcXhEPo7eeA-ygA6JkIldthV-tWfMxEsAIBr0bQ45pC5fYJV3UtbVoruWmqhSO2mSS9FTT8gyGeU_K4sr4lOzzEAbzUxPnHOHdnbmgR46Bl64wmxG7cVYJJcVWaWh6tSkOYwd1gkY0XJPIhS0UKjHf6y4Kb_1u7sNpvqo89kdfXaLhIfj0HVrDEcTsX7kJlR37xcD7VRwiG4Whlq-XDjk5g_UlQX1FahqEOi4Avl2I5w8',
+};
+
+export const HERO_SLIDES: HeroSlide[] = [
+  {
+    id: 'tech-home',
+    badge: 'Singapore Tech & Home Event',
+    title: 'Save up to 35% on Electronics & Computers',
+    subtitle:
+      'Free next-day delivery across Singapore with Prime on audio, laptops, monitors, and smart home essentials.',
+    ctaLabel: "Shop Today's Deals",
+    targetDepartment: 'deals',
+    image: IMAGES.heroPrimeDeals,
+  },
+  {
+    id: 'fresh-sg',
+    badge: 'Amazon Fresh Singapore',
+    title: 'Fresh groceries delivered in 2 hours',
+    subtitle:
+      'Shop organic produce, chilled dairy, bakery staples, and household essentials with free delivery over S$60.',
+    ctaLabel: 'Shop Amazon Fresh',
+    targetDepartment: 'fresh',
+    image: IMAGES.catFreshGrocery,
+  },
+  {
+    id: 'prime-exclusives',
+    badge: 'Prime Member Exclusives',
+    title: 'Fast, free delivery from SG, US & JP',
+    subtitle:
+      'Unlock Prime-only deals on Sony, Kindle, LEGO, and everyday essentials for S$4.99/month.',
+    ctaLabel: 'Explore Electronics',
+    targetDepartment: 'electronics',
+    image: IMAGES.catElectronics,
+  },
+];
+
+export const SINGAPORE_LOCATIONS: SingaporeLocation[] = [
+  {
+    label: 'Marina Bay · Singapore',
+    postalCode: '018956',
+    deliveryWindow: 'Tomorrow by 10 PM',
+  },
+  {
+    label: 'Orchard · Singapore',
+    postalCode: '238801',
+    deliveryWindow: 'Tomorrow by 8 PM',
+  },
+  {
+    label: 'Tampines · Singapore',
+    postalCode: '529508',
+    deliveryWindow: 'Tomorrow by 10 PM',
+  },
+  {
+    label: 'Jurong East · Singapore',
+    postalCode: '609601',
+    deliveryWindow: 'Tomorrow by 10 PM',
+  },
+  {
+    label: 'Woodlands · Singapore',
+    postalCode: '730888',
+    deliveryWindow: 'Tomorrow by 10 PM',
+  },
+];
+
+export const DEPARTMENT_LABELS: Record<DepartmentId, string> = {
+  all: 'All Departments',
+  deals: "Today's Deals",
+  fresh: 'Amazon Fresh',
+  electronics: 'Electronics',
+  computers: 'Computers',
+  books: 'Books',
+  toys: 'Toys & Games',
+  baby: 'Baby',
+  home: 'Home & Kitchen',
+  dvds: 'DVDs & Blu-ray',
+};
+
+export const PRODUCTS: Product[] = [
+  {
+    id: 'sony-wh-1000xm5',
+    title: 'Sony WH-1000XM5 Wireless Noise Cancelling Headphones, Midnight Black',
+    brand: 'Sony',
+    department: 'electronics',
+    categoryLabel: 'Audio & Wearables',
+    price: 419.0,
+    originalPrice: 599.0,
+    discountPercent: 30,
+    dealTag: 'Limited time deal',
+    isDeal: true,
+    isPrime: true,
+    rating: 4.8,
+    reviewCount: 3412,
+    image: IMAGES.dealSonyHeadphones,
+    imageMode: 'contain',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Industry-leading noise cancellation powered by two processors controlling eight microphones, crystal clear hands-free calling, and up to 30 hours of battery life.',
+    variants: ['Midnight Black', 'Platinum Silver', 'Smoky Pink'],
+    specs: [
+      { label: 'Connectivity', value: 'Bluetooth 5.2 Multipoint' },
+      { label: 'Battery Life', value: 'Up to 30 hours (ANC On)' },
+      { label: 'Driver Unit', value: '30 mm carbon fiber composite' },
+      { label: 'Warranty', value: '1 Year Sony Singapore Warranty' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'breville-bambino',
+    title: 'Breville Bambino Compact Espresso Machine, Brushed Stainless Steel',
+    brand: 'Breville',
+    department: 'home',
+    categoryLabel: 'Home & Kitchen',
+    price: 468.0,
+    originalPrice: 599.0,
+    discountPercent: 22,
+    dealTag: 'Limited time deal',
+    isDeal: true,
+    isPrime: true,
+    rating: 4.7,
+    reviewCount: 1890,
+    image: IMAGES.dealEspressoMachine,
+    imageMode: 'contain',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Barista-quality espresso in a compact footprint. ThermoJet heating system reaches optimal extraction temperature in 3 seconds with automatic microfoam milk texturing.',
+    variants: ['Brushed Stainless Steel', 'Black Truffle', 'Sea Salt'],
+    specs: [
+      { label: 'Heating System', value: '3-Second ThermoJet' },
+      { label: 'Portafilter', value: '54 mm stainless steel' },
+      { label: 'Voltage', value: '220–240V (Singapore 3-pin plug)' },
+      { label: 'Water Tank', value: '1.4 Litres removable' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'kindle-paperwhite-16gb',
+    title: 'Kindle Paperwhite (16 GB) – 6.8" glare-free display & adjustable warm light',
+    brand: 'Amazon',
+    department: 'books',
+    categoryLabel: 'Kindle E-Readers',
+    price: 219.0,
+    originalPrice: 269.0,
+    discountPercent: 18,
+    dealTag: 'Prime Deal',
+    isDeal: true,
+    isPrime: true,
+    rating: 4.9,
+    reviewCount: 8210,
+    image: IMAGES.dealKindleReader,
+    imageMode: 'contain',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Purpose-built for reading with a 300 ppi flush-front glare-free display, adjustable warm light, IPX8 waterproofing, and up to 10 weeks of battery life via USB-C.',
+    variants: ['16 GB · Black', '16 GB · Agave Green', '32 GB Signature Edition'],
+    specs: [
+      { label: 'Display', value: '6.8" Paperwhite, 300 ppi' },
+      { label: 'Waterproof Rating', value: 'IPX8 (up to 2m fresh water)' },
+      { label: 'Storage', value: '16 GB (holds thousands of books)' },
+      { label: 'Charging', value: 'USB-C' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'lg-ultragear-27',
+    title: 'LG UltraGear 27" QHD 165Hz 1ms Gaming Monitor with NVIDIA G-SYNC',
+    brand: 'LG',
+    department: 'computers',
+    categoryLabel: 'Gaming Monitors',
+    price: 359.0,
+    originalPrice: 499.0,
+    discountPercent: 28,
+    dealTag: 'Limited time deal',
+    isDeal: true,
+    isPrime: true,
+    rating: 4.6,
+    reviewCount: 942,
+    image: IMAGES.dealGamingMonitor,
+    imageMode: 'contain',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      '27-inch QHD (2560 x 1440) Nano IPS panel with ultra-fast 1ms (GtG) response time, 165Hz refresh rate, HDR10 support, and ergonomic tilt/height/pivot stand.',
+    variants: ['27" QHD 165Hz', '32" QHD 165Hz'],
+    specs: [
+      { label: 'Resolution', value: '2560 x 1440 (QHD)' },
+      { label: 'Refresh Rate', value: '165Hz · 1ms GtG' },
+      { label: 'Color Gamut', value: 'DCI-P3 98%' },
+      { label: 'Ports', value: '2x HDMI, 1x DisplayPort 1.4' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'audio-wearables-bundle',
+    title: 'Wireless ANC Earbuds & Smart Fitness Watch Studio Bundle',
+    brand: 'SoundCore & Garmin',
+    department: 'electronics',
+    categoryLabel: 'Audio & Wearables',
+    price: 289.0,
+    originalPrice: 349.0,
+    discountPercent: 17,
+    dealTag: 'Singapore Bundle',
+    isDeal: false,
+    isPrime: true,
+    rating: 4.7,
+    reviewCount: 618,
+    image: IMAGES.catElectronics,
+    imageMode: 'cover',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Curated daily tech pair featuring adaptive noise-cancelling earbuds and an AMOLED GPS fitness watch with multi-day battery life.',
+    variants: ['Graphite', 'Sandstone'],
+    specs: [
+      { label: 'Water Resistance', value: '5 ATM / IPX5' },
+      { label: 'Audio Codec', value: 'LDAC & AAC' },
+      { label: 'Warranty', value: '1 Year Local SG Warranty' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'ultrabook-mech-setup',
+    title: 'Keychron K2 Pro Wireless Mechanical Keyboard & Aluminium Laptop Stand',
+    brand: 'Keychron',
+    department: 'computers',
+    categoryLabel: 'Laptops & Keyboards',
+    price: 169.0,
+    originalPrice: 199.0,
+    discountPercent: 15,
+    isDeal: false,
+    isPrime: true,
+    rating: 4.8,
+    reviewCount: 1245,
+    image: IMAGES.catComputers,
+    imageMode: 'cover',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Hot-swappable QMK/VIA wireless mechanical keyboard with PBT keycaps, paired with an anodized aluminium ergonomic desk stand.',
+    variants: ['Brown Tactile Switch', 'Red Linear Switch'],
+    specs: [
+      { label: 'Layout', value: '75% Compact (84 Keys)' },
+      { label: 'Compatibility', value: 'macOS, Windows, Linux' },
+      { label: 'Connection', value: 'Bluetooth 5.1 / USB-C Wired' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'amazon-fresh-organic-box',
+    title: 'Amazon Fresh Organic Produce, Sourdough & Cold-Pressed Juice Bundle',
+    brand: 'Amazon Fresh',
+    department: 'fresh',
+    categoryLabel: 'Grocery & Fresh',
+    price: 42.5,
+    originalPrice: 49.0,
+    discountPercent: 13,
+    dealTag: '2-Hr Fresh Delivery',
+    isDeal: false,
+    isPrime: true,
+    rating: 4.8,
+    reviewCount: 2340,
+    image: IMAGES.catFreshGrocery,
+    imageMode: 'cover',
+    deliveryEstimate: '2-hour scheduled delivery in Singapore',
+    description:
+      'Farm-fresh organic leafy greens, vine tomatoes, avocados, artisan country sourdough loaf, and 1L Valencia cold-pressed orange juice.',
+    variants: ['Standard Family Box', 'Small Household Box'],
+    specs: [
+      { label: 'Delivery Window', value: '2-Hour Chilled Slot' },
+      { label: 'Origin', value: 'Cameron Highlands & Australia' },
+      { label: 'Storage', value: 'Chilled & Ambient Packed' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'bestseller-book-collection',
+    title: 'The Creative Act & Modern Design Bestsellers Hardcover Set',
+    brand: 'Penguin & Canongate',
+    department: 'books',
+    categoryLabel: 'Books & DVDs',
+    price: 54.0,
+    originalPrice: 68.0,
+    discountPercent: 21,
+    isDeal: false,
+    isPrime: true,
+    rating: 4.9,
+    reviewCount: 4120,
+    image: IMAGES.catBooks,
+    imageMode: 'cover',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Curated hardcover reading collection exploring creative craft, systems thinking, and everyday mindfulness.',
+    variants: ['Hardcover', 'Paperback'],
+    specs: [
+      { label: 'Format', value: 'Hardcover · 432 pages' },
+      { label: 'Language', value: 'English' },
+      { label: 'Fulfilment', value: 'Shipped from Amazon.sg' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'artisan-wooden-blocks-baby',
+    title: 'Natural Beechwood Building Blocks & Montessori Nursery Play Set',
+    brand: 'Hape',
+    department: 'toys',
+    categoryLabel: 'Toys & Baby',
+    price: 49.9,
+    originalPrice: 62.0,
+    discountPercent: 20,
+    isDeal: false,
+    isPrime: true,
+    rating: 4.9,
+    reviewCount: 785,
+    image: IMAGES.catToysBaby,
+    imageMode: 'cover',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      '60-piece smooth-sanded FSC beechwood blocks with water-based non-toxic finishes and cotton storage bag for toddlers 18m+.',
+    variants: ['60-Piece Natural', '100-Piece Pastel'],
+    specs: [
+      { label: 'Recommended Age', value: '18 months – 5 years' },
+      { label: 'Material', value: 'FSC Certified Beechwood' },
+      { label: 'Safety Standard', value: 'EN71 & ASTM Certified' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'baby-nursery-starter',
+    title: 'Organic Cotton Baby Nursery Swaddle & Soft Teether Gift Set',
+    brand: 'Aden + Anais',
+    department: 'baby',
+    categoryLabel: 'Baby Essentials',
+    price: 58.0,
+    isDeal: false,
+    isPrime: true,
+    rating: 4.8,
+    reviewCount: 512,
+    image: IMAGES.catToysBaby,
+    imageMode: 'cover',
+    deliveryEstimate: 'FREE delivery tomorrow by 10 PM',
+    description:
+      'Breathable 100% organic muslin swaddles designed for Singapore’s humid climate, paired with a natural wooden rattle.',
+    variants: ['Botanical Neutral', 'Cloud Blue'],
+    specs: [
+      { label: 'Fabric', value: '100% Organic Cotton Muslin' },
+      { label: 'Pack Size', value: '3 Swaddles + 1 Rattle' },
+      { label: 'Care', value: 'Machine washable' },
+    ],
+    inStock: true,
+  },
+  {
+    id: 'cinema-4k-collection',
+    title: 'Studio Ghibli & Modern Cinema Collector Blu-ray Box Set',
+    brand: 'Studio Collector',
+    department: 'dvds',
+    categoryLabel: 'Books & DVDs',
+    price: 89.0,
+    originalPrice: 112.0,
+    discountPercent: 21,
+    isDeal: false,
+    isPrime: true,
+    rating: 4.9,
+    reviewCount: 640,
+    image: IMAGES.catBooks,
+    imageMode: 'cover',
+    deliveryEstimate: 'FREE delivery in 2–3 days',
+    description:
+      'Region-free Blu-ray collector edition featuring remastered transfers, Japanese and English audio tracks, and illustrated booklet.',
+    variants: ['Blu-ray Collector Box', 'Standard DVD Set'],
+    specs: [
+      { label: 'Region', value: 'Region A / All-Region Compatible' },
+      { label: 'Audio', value: 'DTS-HD Master Audio 5.1' },
+      { label: 'Subtitles', value: 'English, Chinese, Japanese' },
+    ],
+    inStock: true,
+  },
+];
+
+export const INITIAL_ORDERS: Order[] = [
+  {
+    id: 'SG-408-9182741',
+    placedAt: '21 Nov 2026',
+    status: 'Delivered',
+    deliveryLocation: 'Singapore 018956',
+    paymentMethod: 'PayNow QR',
+    subtotal: 219.0,
+    deliveryFee: 0,
+    total: 219.0,
+    items: [
+      {
+        productId: 'kindle-paperwhite-16gb',
+        title: 'Kindle Paperwhite (16 GB) – 6.8" glare-free display & adjustable warm light',
+        image: IMAGES.dealKindleReader,
+        price: 219.0,
+        quantity: 1,
+        selectedVariant: '16 GB · Black',
+      },
+    ],
+  },
+];
+
+export const HELP_ARTICLES: Record<string, HelpArticle> = {
+  prime: {
+    id: 'prime',
+    title: 'Amazon Prime Singapore',
+    subtitle: 'One membership, fast local & international delivery plus Prime Video.',
+    sections: [
+      {
+        heading: 'FREE 1-Day Local Delivery',
+        body: 'Get unlimited FREE One-Day Delivery on millions of eligible Amazon.sg items with no minimum spend across Singapore.',
+      },
+      {
+        heading: 'FREE International Shipping from US & JP',
+        body: 'Shop Amazon US and Amazon Japan stores directly on Amazon.sg with free international shipping on eligible Prime orders.',
+      },
+      {
+        heading: 'Amazon Fresh 2-Hour Windows',
+        body: 'Schedule convenient 2-hour delivery slots for fresh produce, dairy, meat, and household staples.',
+      },
+    ],
+  },
+  shipping: {
+    id: 'shipping',
+    title: 'Singapore Shipping Rates & Policies',
+    subtitle: 'Transparent local and cross-border delivery options.',
+    sections: [
+      {
+        heading: 'Free Delivery Over S$40',
+        body: 'Non-Prime orders shipped by Amazon.sg qualify for free standard delivery when your eligible subtotal reaches S$40 or more.',
+      },
+      {
+        heading: 'Amazon Fresh Delivery',
+        body: 'Free 2-hour scheduled delivery on Fresh orders over S$60 for Prime members.',
+      },
+    ],
+  },
+  paynow: {
+    id: 'paynow',
+    title: 'PayNow, Local Cards & 0% Instalment Plans',
+    subtitle: 'Flexible payment methods tailored for Singapore shoppers.',
+    sections: [
+      {
+        heading: 'PayNow QR Instant Checkout',
+        body: 'Scan directly with DBS PayLah!, OCBC Digital, UOB TMRW, or any participating Singapore bank app.',
+      },
+      {
+        heading: '0% Interest Instalments',
+        body: 'Split eligible purchases over S$200 across 6 or 12 months with participating Visa and Mastercard issuers in Singapore.',
+      },
+    ],
+  },
+  support: {
+    id: 'support',
+    title: 'Amazon.sg Customer Service & Returns',
+    subtitle: '15-day hassle-free local returns and warranty support.',
+    sections: [
+      {
+        heading: 'Easy Returns & Replacements',
+        body: 'Drop off eligible returns at PopStation lockers, SingPost branches, or schedule a courier pickup right from Returns & Orders.',
+      },
+      {
+        heading: 'Local SG Warranty',
+        body: 'Electronics fulfilled by Amazon.sg include local manufacturer warranty support and Singapore 3-pin power plugs where applicable.',
+      },
+    ],
+  },
+};

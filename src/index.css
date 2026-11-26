@@ -1,0 +1,146 @@
+@import "tailwindcss";
+
+@theme {
+  --color-amazon-navy: #131921;
+  --color-on-amazon-navy: #FFFFFF;
+  --color-amazon-slate: #232F3E;
+  --color-on-amazon-slate: #FFFFFF;
+  --color-amazon-gold: #FFD814;
+  --color-on-amazon-gold: #0F1111;
+  --color-amazon-orange: #FFA41C;
+  --color-on-amazon-orange: #0F1111;
+  --color-amazon-amber: #FEBD69;
+  --color-on-amazon-amber: #0F1111;
+  --color-deal-red: #CC0C39;
+  --color-on-deal-red: #FFFFFF;
+  --color-prime-blue: #00A8E1;
+  --color-star-amber: #DE7921;
+
+  --color-light-primary: #005767;
+  --color-light-on-primary: #FFFFFF;
+  --color-light-primary-container: #007185;
+  --color-light-on-primary-container: #B9EFFF;
+  --color-light-secondary: #46636B;
+  --color-light-on-secondary: #FFFFFF;
+  --color-light-secondary-container: #C6E5EF;
+  --color-light-on-secondary-container: #4A676F;
+  --color-light-tertiary: #744404;
+  --color-light-on-tertiary: #FFFFFF;
+  --color-light-error: #BA1A1A;
+  --color-light-on-error: #FFFFFF;
+  --color-light-background: #E3E6E6;
+  --color-light-on-background: #0F1111;
+  --color-light-surface: #FFFFFF;
+  --color-light-surface-dim: #D5D9D9;
+  --color-light-surface-container-lowest: #FFFFFF;
+  --color-light-surface-container-low: #F7FAFA;
+  --color-light-surface-container: #F1F4F5;
+  --color-light-surface-container-high: #E3E6E6;
+  --color-light-surface-container-highest: #D5D9D9;
+  --color-light-on-surface: #0F1111;
+  --color-light-on-surface-variant: #565959;
+  --color-light-outline: #6F797C;
+  --color-light-outline-variant: #D5D9D9;
+
+  --font-display: "Mulish", sans-serif;
+  --font-headline: "Mulish", sans-serif;
+  --font-title: "Instrument Sans", sans-serif;
+  --font-body: "Instrument Sans", sans-serif;
+  --font-label: "Instrument Sans", sans-serif;
+  --font-mono: "Spline Sans Mono", monospace;
+
+  --text-display-lg: 40px;
+  --text-display-lg--line-height: 46px;
+  --text-display-lg--letter-spacing: -0.5px;
+  --text-display-lg--font-weight: 800;
+
+  --text-display-lg-mobile: 28px;
+  --text-display-lg-mobile--line-height: 34px;
+  --text-display-lg-mobile--letter-spacing: -0.25px;
+  --text-display-lg-mobile--font-weight: 800;
+
+  --text-headline-lg: 24px;
+  --text-headline-lg--line-height: 32px;
+  --text-headline-lg--letter-spacing: -0.25px;
+  --text-headline-lg--font-weight: 700;
+
+  --text-headline-md: 20px;
+  --text-headline-md--line-height: 28px;
+  --text-headline-md--letter-spacing: 0px;
+  --text-headline-md--font-weight: 700;
+
+  --text-headline-sm: 16px;
+  --text-headline-sm--line-height: 22px;
+  --text-headline-sm--letter-spacing: 0px;
+  --text-headline-sm--font-weight: 700;
+
+  --text-title-md: 14px;
+  --text-title-md--line-height: 20px;
+  --text-title-md--letter-spacing: 0px;
+  --text-title-md--font-weight: 600;
+
+  --text-body-md: 14px;
+  --text-body-md--line-height: 20px;
+  --text-body-md--letter-spacing: 0px;
+  --text-body-md--font-weight: 400;
+
+  --text-body-sm: 12px;
+  --text-body-sm--line-height: 16px;
+  --text-body-sm--letter-spacing: 0px;
+  --text-body-sm--font-weight: 400;
+
+  --text-label-lg: 14px;
+  --text-label-lg--line-height: 18px;
+  --text-label-lg--letter-spacing: 0px;
+  --text-label-lg--font-weight: 600;
+
+  --text-label-md: 12px;
+  --text-label-md--line-height: 16px;
+  --text-label-md--letter-spacing: 0px;
+  --text-label-md--font-weight: 600;
+
+  --text-label-sm: 11px;
+  --text-label-sm--line-height: 14px;
+  --text-label-sm--letter-spacing: 0.2px;
+  --text-label-sm--font-weight: 600;
+
+  --text-mono-sm: 12px;
+  --text-mono-sm--line-height: 16px;
+  --text-mono-sm--letter-spacing: 0px;
+  --text-mono-sm--font-weight: 500;
+
+  --spacing-gutter-xs: 4px;
+  --spacing-gutter-sm: 8px;
+  --spacing-gutter-md: 12px;
+  --spacing-gutter-lg: 16px;
+  --spacing-gutter-xl: 20px;
+  --spacing-section: 24px;
+  --spacing-page-margin: 20px;
+
+  --radius-sm: 4px;
+  --radius-md: 8px;
+  --radius-lg: 12px;
+
+  --transition-duration-state-change: 120ms;
+  --transition-duration-surface-enter: 200ms;
+  --transition-duration-surface-exit: 150ms;
+  --transition-timing-function-state-change: ease-out;
+}
+
+@layer base {
+  html {
+    scroll-behavior: smooth;
+  }
+
+  .material-symbols-outlined {
+    display: inline-block;
+    width: 1em;
+    height: 1em;
+    line-height: 1 !important;
+    box-sizing: content-box;
+    overflow: hidden;
+    white-space: nowrap;
+    direction: ltr;
+    vertical-align: middle;
+  }
+}
